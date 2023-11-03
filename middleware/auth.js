@@ -5,6 +5,7 @@ exports.authenticate = async (req, res, next) => {
   try {
     const token = req.header("Authorization");
     const { userId } = jwt.verify(token, "1234567890");
+    // print user is
     console.log('userID >>>>', userId);
     const user = await SignUp.findByPk(userId);
     req.user = user;
