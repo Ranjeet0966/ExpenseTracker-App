@@ -11,10 +11,10 @@
     />
     <title>Login</title>
   </head>
-  <body>
-    <header id="main-header" class="bg-warning text-white p-2 mb-3">
+  <body  style="background-image: url(https://cdn.wallpapersafari.com/2/33/MZpfzD.jpg); background-size: cover; height: 100vh;">
+    <header id="main-header" class=" text-white p-1 mb-3">
       <div class="container">
-        <div class="row">
+        <div class="row mr-5 p-2">
           <div class="col-md-6">
             <h1 id="header-title">LogIn</h1>
           </div>
@@ -22,9 +22,9 @@
       </div>
     </header>
     <div class="container">
-      <div id="main" class="card card-body">
+      <div id="main" >
         <form action="/user/login" method="post" id="form" novalidate>
-          <label for="email" class="form-label">Email</label>
+          <label for="email" class="form-label  text-white" ><h2>Email</h2></label>
           <input
             type="text"
             class="form-control"
@@ -33,7 +33,7 @@
             placeholder="Enter Email"
             required
           />
-          <label for="password" class="form-control-label">Password</label>
+          <label for="password" class="form-control-label text-white"><h2>Password</h2></label>
           <input
             type="password"
             class="form-control"
@@ -45,15 +45,16 @@
           <br />
           <button type="submit" class="btn btn-primary">Login</button>
 
-          <p class="" style="color: #393f81">
-            Don't have an account?
-            <a href="../signup/signup.html" style="color: #393f81"
-              >Register here</a
+          <p class="" style="color: #f8f6f5">
+           
+            <a href="../signup/signup.html" style="color: #0ab20d"
+              ><h6> Don't have an account?Register here</h6></a
             >
           </p>
-          <p class="" style="color: #393f81">
+          <p class="" style="color: #ece4e4">
             Forgot Password?
-            <a href="../login/forgotpassword.html" style="color: #393f81"
+            
+            <a href="../login/forgotpassword.html" style="color: #ec1d1d"
               >Click here</a
             >
           </p>

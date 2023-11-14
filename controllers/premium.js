@@ -8,13 +8,22 @@ const UserServices = require("../services/userservices");
 exports.showLeaderBoard = async (req, res) => {
   try {
     const leaderBoardOfUsers = await Users.findAll({
-      attributes: ["id", "name", "totalExpenses"],
+      attributes: ["id", "name", [sequelize.fn('sum',sequelize.col('expenses.amount')),"totalExpenses"]],
+      include: [
+        {
+        model : Expense,
+        attributes:[]
+        }
+      ],
+      group:['id'],
       order: [["totalExpenses", "DESC"]],
     });
+    
 
     res.status(200).json(leaderBoardOfUsers);
   } catch (error) {
     res.status(403).json({ error: error });
+    console.log(error);
   }
 };
 
