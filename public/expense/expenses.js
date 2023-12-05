@@ -252,6 +252,7 @@ function showpagination({
   nextPage,
   previousPage,
   lastPage,
+  
 }) {
   pagination.innerHTML = "";
   if (hasPreviousPage) {
