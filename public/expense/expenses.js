@@ -206,10 +206,12 @@ btnDownload.onclick = async () => {
         a.click();
       } else {
         throw new Error(response.data.message);
+        
       }
     }
   } catch (error) {
     showError(error);
+    console.log(error);
   }
 };
 
